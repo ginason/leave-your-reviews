@@ -1,0 +1,47 @@
+<%= javascript_include_tag 'products' %>
+
+<section id="home" class="jumnotron text-center">
+  <div class="container">
+    <h1>Leave Your Reviews!!</h1>
+  </div>
+</section>
+<%=render "all_lists"%>
+
+<section id="amazon">
+  <div class="container">
+    <h1>Amazon API</h1>
+  </div>
+</section>
+
+<ul class="list-unstyled">
+  <% @amazon_array.map do |item|%>
+    <li class="media">
+      <%=link_to(image_tag("#{item["img_url"]}", size: "250"), "#{item["url"]}", class: "mr-3")%>
+      <div class="media-body">
+        <h5 class="mt-0 mb-1"><%=item["brand"]%></h5><br>
+        <%=item["description"]%><br>
+        <%=item["price"]%>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+
+<!-- <div class="album text-muted">
+    <div class="container">
+      <div class="row">
+        <div class="card"><img src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/101/10197/10197278.jpg" style="height: 280px; width: 280px; display: block;">
+          <p class="card-text">Blue Snowball Microphone</p></div>
+        <div class="card"><img src="https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/r/ef/refurb/mbp15touchbar/refurb-mbp15touchbar-silver-gallery_AV3?wid=1000&hei=1000&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1491425542627" style="height: 280px; width: 280px; display: block;">
+          <p class="card-text">Mac Book Pro 2017</p></div>
+        <div class="card"><img src="https://images-na.ssl-images-amazon.com/images/I/61ixpPJsLML._SL1500_.jpg" style="height: 280px; width: 280px; display: block;">
+          <p class="card-text">Microphone Stand</p></div>
+        <div class="card"><img src="https://cf1.s3.souqcdn.com/item/2014/03/24/67/67/34/2/item_XL_6767342_4410227.jpg" style="height: 280px; width: 280px; display: block;">
+          <p class="card-text">Yoga Mat Eco-friendly</p></div>
+        <div class="card"><img src="https://images-na.ssl-images-amazon.com/images/I/71bNSpLlQuL._SL1500_.jpg" style="height: 280px; width: 280px; display: block;">
+          <p class="card-text">Cuisin Coffee Machine</p></div>
+        <div class="card"><img src="https://johnlewis.scene7.com/is/image/JohnLewis/230874140?$prod_main$" style="height: 280px; width: 280px; display: block;">
+          <p class="card-text">Panasonic Microwave</p></div>
+      </div>
+    </div>
+</div> -->
