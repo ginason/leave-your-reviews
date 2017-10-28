@@ -20204,3 +20204,77 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 993ms (Views: 437.1ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-28 15:57:49 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ProductsController::ACCESS_KEY_ID):
+  
+app/controllers/products_controller.rb:20:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-28 16:00:13 -0400
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NameError (uninitialized constant ProductsController::ACCESS_KEY_ID):
+  
+app/controllers/products_controller.rb:20:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-28 16:00:47 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (9.9ms)
+  Rendered products/index.html.erb within layouts/application (195.5ms)
+Completed 200 OK in 9371ms (Views: 281.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 16:01:36 -0400
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+NameError (uninitialized constant ProductsController::ACCESS_KEY_ID):
+  
+app/controllers/products_controller.rb:22:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-28 16:01:51 -0400
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 6ms
+
+
+  
+NameError (uninitialized constant ProductsController::ACCESS_KEY_ID):
+  
+app/controllers/products_controller.rb:22:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-28 16:02:39 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (7.8ms)
+  Rendered products/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 869ms (Views: 50.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 16:05:16 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (7.6ms)
+  Rendered products/index.html.erb within layouts/application (142.7ms)
+Completed 200 OK in 7956ms (Views: 190.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 16:06:39 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (9.1ms)
+  Rendered products/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 950ms (Views: 73.8ms | ActiveRecord: 0.7ms)
+
+

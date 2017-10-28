@@ -1,14 +1,9 @@
-# require 'active_support/core_ext/hash'
-# require 'time'
-# require 'uri'
-# require 'openssl'
-# require 'base64'
-
 class ProductsController < ApplicationController
 
   ENDPOINT = "webservices.amazon.com"
   REQUEST_URI = "/onca/xml"
-
+  ACCESS_KEY_ID = ENV["ACCESS_KEY_ID"]
+  SECRET_KEY = ENV["SECRET_KEY"]
 
   def index
 
