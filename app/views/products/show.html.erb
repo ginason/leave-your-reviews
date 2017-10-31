@@ -1,4 +1,28 @@
+<div class="container">
 <%=@product.name%><br>
 <%=image_tag("#{@product.url}", size: "280")%><br>
 <%=@product.description%><br>
-$<%=@product.price_in_dollar%>
+$<%=@product.price_in_dollar%><br>
+<%=@product.id%>
+
+<ul class="list-unstyled">
+  <% @amazon_array.map do |item|%>
+    <li class="media">
+      <%=link_to(image_tag("#{item["img_url"]}", size: "250"), "#{item["url"]}", class: "mr-3")%>
+      <div class="media-body">
+        <h5 class="mt-0 mb-1"><%=item["brand"]%></h5><br>
+        <%=item["description"]%><br>
+        <%=item["price"]%>
+      </div>
+    </li>
+  <% end %>
+</ul>
+  <h1>Comments!!</h1>
+  <% @product.reviews.each do |comment|%>
+  <%=comment.name%><br>
+  <%=comment.comment%><br>
+  <%=comment.product_id%>
+  <%end%>
+
+<%=render "/reviews/create", product: @product%>
+</div>

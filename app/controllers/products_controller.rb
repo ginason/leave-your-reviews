@@ -1,13 +1,18 @@
 class ProductsController < ApplicationController
-
+  attr_accessor :name, :url, :description, :price
   ENDPOINT = "webservices.amazon.com"
   REQUEST_URI = "/onca/xml"
   ACCESS_KEY_ID = ENV["ACCESS_KEY_ID"]
   SECRET_KEY = ENV["SECRET_KEY"]
 
   def index
-
     @products = Product.all
+  end
+
+  def show
+    @product = Product.find(params[:id])
+    @review = Review.new
+    keywords = @product.name
 
     params = {
       "Service" => "AWSECommerceService",
@@ -15,7 +20,7 @@ class ProductsController < ApplicationController
       "AWSAccessKeyId" => ACCESS_KEY_ID,
       "AssociateTag" => "leavyourrevie-20",
       "SearchIndex" => "All",
-      "Keywords" => "laptop computer macbook",
+      "Keywords" => keywords,
       "ResponseGroup" => "Images,ItemAttributes,Offers"
     }
 
@@ -40,13 +45,13 @@ class ProductsController < ApplicationController
 
     response = HTTParty.get(request_url)
 
-    # item_array=[]
-    @item_hash = response["ItemSearchResponse"]["Items"]["Item"]
-    # for i in 0..5
-    #   item_array.push(item_hash[i])
-    # end
 
-    # puts item_array.inspect, item_array.size
+    @item_hash = response["ItemSearchResponse"]["Items"]["Item"]
+
+    # keywords = params[:keyword]
+    # params = search_by_keyword("Blue Snowball Microphone")
+    # @item_hash = request_url(params)
+
     @amazon_array = []
     @amazon_hash = {}
     @item_hash.map do |item|
@@ -66,37 +71,15 @@ class ProductsController < ApplicationController
       @amazon_array.push(@amazon_hash)
       @amazon_hash = {}
       puts "======================="
-
     end
     puts @amazon_array.inspect
 
-    # img_hash = response["ItemSearchResponse"]["Items"]["Item"]["SmallImage"]
-
-
-    # item_hash.map do |item|
-      # new_hash["ASIN"]=item["ASIN"]
-      # puts item_hash["LargeImage"]["URL"]
-      # puts item_hash["ItemAttributes"]["Brand"]
-      # puts item_hash["ItemAttributes"]["Title"]
-      # puts item_hash["OfferSummary"]["LowestNewPrice"]["FormattedPrice"]
-      # puts item_hash["DetailPageURL"]
-      # puts item_hash["ASIN"]
-      # puts "======================="
-
-    # end
-
-    # img_hash.map do |img|
-    #   puts img["URL"]
-    # end
 
     puts "?????"
     puts "?????"
-    # puts response["ItemSearchResponse"]["Items"]["Item"]["Item"]["SmallImage"]["URL"]
+
   end
 
-  def show
-    @product = Product.find(params[:id])
-  end
   def new
     @product = Product.new
   end

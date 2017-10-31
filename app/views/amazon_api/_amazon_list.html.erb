@@ -1,0 +1,12 @@
+<ul class="list-unstyled">
+  <% @amazon_array.map do |item|%>
+    <li class="media">
+      <%=link_to(image_tag("#{item["img_url"]}", size: "250"), "#{item["url"]}", class: "mr-3")%>
+      <div class="media-body">
+        <h5 class="mt-0 mb-1"><%=item["brand"]%></h5><br>
+        <%=item["description"]%><br>
+        <%=item["price"]%>
+      </div>
+    </li>
+  <% end %>
+</ul>

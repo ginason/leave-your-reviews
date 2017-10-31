@@ -1,0 +1,14 @@
+<h1>Reviews</h1>
+  <%= form_for(@review) do |f|%>
+  <div class="form-group">
+    <%=f.label :username, "Username"%>
+    <%=f.text_field :username, class: "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%=f.label :comment, "Comment"%>
+    <%=f.text_area :comment, placeholder: "Leave your comment!", class: "form-control"%>
+  </div>
+
+  <%=f.submit "Submit!"%>
+  <%end%>
