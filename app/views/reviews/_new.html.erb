@@ -1,0 +1,9 @@
+
+<h1>save??</h1>
+<h1>Comments!!</h1>
+
+<% @product.reviews.each do |review|%>
+<%=review.username%><br>
+<%=review.comment%><br>
+<%=review.product_id%>
+<%end%>

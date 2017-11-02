@@ -1,13 +1,76 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+section{
+  margin: 100px auto;
+}
+.new-review-font{
+  margin-bottom: 50px;
+}
+.review-font{
+  margin-bottom: 50px;
+}
+.input-group{
+  margin-bottom: 30px;
+}
+.form-control{
+  margin-bottom: 30px;
+}
+
 .navbar {
   margin-bottom: 30px;
 }
 .album {
   margin: 30px auto;
 }
-.card-text{
-  // text-align: center;
+.card{
   margin: 10px auto;
+}
+.card-text{
+  margin: 10px auto;
+}
+.navbar-text{
+  padding-left: 50px;
+}
+.footer{
+  line-height: 4em;
+}
+.title-amazon{
+  margin-bottom: 60px;
+}
+.media.amazon{
+  border: solid rgba(0, 0, 0, 0.5);;
+  margin-bottom: 10px;
+}
+
+.media.amazon:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.mt-0.mb-1{
+  padding-top: 15px;
+}
+.amazon-badge{
+  color: white;
+  font-size: 16px;
+}
+.badge{
+  font-size: 16px;
+  margin-top: 15px;
+}
+.badge.badge-success:visited{
+  text-decoration: none;
+}
+.badge.badge-success:hover{
+  text-decoration: none;
+  color: black;
+}
+.badge.badge-success:link{
+  text-decoration: none;
+}
+.badge.badge-success:active{
+  text-decoration: none;
+}
+.jumbotron{
+  background-color: white;
 }

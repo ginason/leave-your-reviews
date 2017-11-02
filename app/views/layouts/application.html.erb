@@ -9,7 +9,7 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
   <h4 class="navbar-brand">Leave Your Reveiws</h4>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,19 +24,24 @@
       <li class="nav-item">
         <%=link_to "New Product", new_product_path, class: "nav-link" %>
       </li>
+      <li class="nav-item">
+        <%=link_to "About the Website", about_products_path, class: "nav-link" %>
+      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input id="bar" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button id="searchButton" onclick="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <span class="navbar-text">
+      <%=link_to "My Projects", myprojects_products_path, class: "nav-link"%>
+    </span>
+    <span class="navbar-text">
+      <%=link_to "About Me", aboutme_products_path, class: "nav-link"%>
+    </span>
   </div>
   </nav>
   <%= yield %>
+<footer class="footer">
+  <div class="container">
+    &copy; Leave your reviews by Gina Son
+  </div>
+</footer>
 
-  <footer class="footer">
-    <div class="container">
-    <span class="text-muted">&copy; Leave Your Review</span>
-    </div>
-  </footer>
   </body>
 </html>

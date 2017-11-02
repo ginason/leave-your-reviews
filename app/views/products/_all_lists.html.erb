@@ -1,11 +1,11 @@
 <div class="album text-muted">
   <div class="container">
-    <div class="row">
+    <div class="row" id="product-list">
       <% @products.each do |product| %>
       <div class="card">
-        <%=product.name%>
+        <h6><%=product.name%></h6>
         <%=link_to(image_tag("#{product.url}", size: "280"), product_path(product))%>
-        $<%=product.price_in_dollar%>
+        <h6>$<%=product.price_in_dollar%></h6>
       </div>
       <% end %>
     </div>

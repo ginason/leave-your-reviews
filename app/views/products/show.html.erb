@@ -1,28 +1,55 @@
 <div class="container">
-<%=@product.name%><br>
-<%=image_tag("#{@product.url}", size: "280")%><br>
-<%=@product.description%><br>
-$<%=@product.price_in_dollar%><br>
-<%=@product.id%>
+<section id="item">
+  <div class="media item">
+    <%=image_tag("#{@product.url}", size: "280", class: "align-self-center mr-3")%><br>
+    <div class="media-body">
+    <h5 class="mt-0"><%=@product.name%></h5><br>
+    <span class="badge badge-pill badge-info">Info</span><br>
+    <%=@product.description%><br>
+    <span class="badge badge-pill badge-warning">$<%=@product.price_in_dollar%><br></span>
 
-<ul class="list-unstyled">
-  <% @amazon_array.map do |item|%>
-    <li class="media">
-      <%=link_to(image_tag("#{item["img_url"]}", size: "250"), "#{item["url"]}", class: "mr-3")%>
-      <div class="media-body">
-        <h5 class="mt-0 mb-1"><%=item["brand"]%></h5><br>
-        <%=item["description"]%><br>
-        <%=item["price"]%>
+    </div>
+  </div>
+</section>
+
+<section id="amazon-prodcuts">
+  <h1 class="title-amazon">Amazon products related to this item</h1>
+  <ul class="list-unstyled">
+    <% @amazon_array.map do |item|%>
+      <li class="media amazon">
+        <%=link_to(image_tag("#{item["img_url"]}", size: "200", class: "mr-3"), "#{item["url"]}", target: "_blank")%>
+        <div class="media-body">
+          <h5 class="mt-0 mb-1"><%=item["brand"]%></h5><br>
+          <%=item["description"]%><br>
+          <p><span class="badge badge-pill badge-warning"><%=item["price"]%></span></p>
+          <span class="badge badge-success"><%=link_to("Go to Amazon Website", "#{item["url"]}", target: "_blank", class: "amazon-badge")%></span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
+
+<section id="reviews">
+  <h1 class="review-font">Reviews</h1>
+  <% @product.reviews.each do |review|%>
+  <div class="card">
+    <div class="card-header">
+      <%=review.username%><br>
+    </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p><%=review.comment%><br></p>
+        </blockquote>
       </div>
-    </li>
-  <% end %>
-</ul>
-  <h1>Comments!!</h1>
-  <% @product.reviews.each do |comment|%>
-  <%=comment.name%><br>
-  <%=comment.comment%><br>
-  <%=comment.product_id%>
+  </div>
   <%end%>
 
-<%=render "/reviews/create", product: @product%>
+</section>
+
+<section id="new-review">
+  <h1 class="new-review-font">Leave a Review</h1>
+  <%=render "reviews/form"%>
+</section>
+
 </div>
