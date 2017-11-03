@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  attr_accessor :name, :url, :description, :price
+  attr_accessor :name, :url, :description, :price_in_dollar
   ENDPOINT = "webservices.amazon.com"
   REQUEST_URI = "/onca/xml"
   ACCESS_KEY_ID = ENV["ACCESS_KEY_ID"]
@@ -115,6 +115,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :url, :description, :price)
+    params.require(:product).permit(:name, :url, :description, :price_in_dollar)
   end
 end

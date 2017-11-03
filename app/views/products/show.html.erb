@@ -7,7 +7,6 @@
     <span class="badge badge-pill badge-info">Info</span><br>
     <%=@product.description%><br>
     <span class="badge badge-pill badge-warning">$<%=@product.price_in_dollar%><br></span>
-
     </div>
   </div>
 </section>
@@ -33,7 +32,7 @@
 <section id="reviews">
   <h1 class="review-font">Reviews</h1>
   <% @product.reviews.each do |review|%>
-  <div class="card">
+  <div class="card review">
     <div class="card-header">
       <%=review.username%><br>
     </div>

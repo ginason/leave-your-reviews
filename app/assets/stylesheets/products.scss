@@ -23,8 +23,21 @@ section{
 .album {
   margin: 30px auto;
 }
-.card{
-  margin: 10px auto;
+.all-list-img{
+  margin: 0 auto;
+}
+.card.review{
+  margin-bottom: 10px;
+}
+.card.mb-3{
+  width: 400px;
+  margin: 10px;
+}
+.card.index.list{
+  margin: 10px;
+  padding: 35px;
+  width: 360px;
+  border: 2px solid;
 }
 .card-text{
   margin: 10px auto;
@@ -73,4 +86,18 @@ section{
 }
 .jumbotron{
   background-color: white;
+}
+.rounded{
+  margin-bottom: 30px;
+}
+.mytitle{
+  margin-bottom: 30px;
+}
+.list-inline-item{
+}
+.fa{
+  color: black;
+}
+.list-inline-item{
+  font-size: 30px;
 }

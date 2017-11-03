@@ -2,10 +2,11 @@
   <div class="container">
     <div class="row" id="product-list">
       <% @products.each do |product| %>
-      <div class="card">
-        <h6><%=product.name%></h6>
-        <%=link_to(image_tag("#{product.url}", size: "280"), product_path(product))%>
-        <h6>$<%=product.price_in_dollar%></h6>
+      <div class="card index list">
+        <%=link_to(image_tag("#{product.url}", size: "280", class: "all-list-img"), product_path(product))%>
+        <h5><%=product.name%></h5>
+        <h5><span class="badge badge-pill badge-warning">$<%=product.price_in_dollar%></span></h5>
+
       </div>
       <% end %>
     </div>
