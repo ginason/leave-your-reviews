@@ -42008,3 +42008,155 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 318ms (Views: 304.3ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:18:15 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (14.0ms)
+  Rendered products/index.html.erb within layouts/application (19.2ms)
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:18:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.9ms)
+  Rendered products/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 4714ms (Views: 4697.0ms | ActiveRecord: 2.3ms)
+
+
+Completed 200 OK in 3857ms (Views: 3854.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:20:12 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (3.7ms)
+  Rendered products/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 803ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ia (min-width: ": expected expression (e.g. 1px, bold), was "@screen-sm-min) {"):
+    4:     <title>LeaveYourReviews</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <script src="https://use.fontawesome.com/6bf9c1cbb1.js"></script>
+   10:   </head>
+  
+app/assets/stylesheets/products.scss:104
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1029640547680643773_70099253896300'
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:21:19 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.4ms)
+  Rendered products/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 2278ms (Views: 2275.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:21:30 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.7ms)
+  Rendered products/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 2072ms (Views: 2068.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:21:34 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.7ms)
+  Rendered products/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:23:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.6ms)
+  Rendered products/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 2369ms (Views: 2366.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:23:28 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (3.0ms)
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:26:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.7ms)
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 2487ms (Views: 2484.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:26:56 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.8ms)
+  Rendered products/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 2434ms (Views: 2431.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:27:08 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.5ms)
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:27:30 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.0ms)
+  Rendered products/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 2320ms (Views: 2318.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-03 00:31:02 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (2.6ms)
+  Rendered products/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-06 21:26:07 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_all_lists.html.erb (12.4ms)
+  Rendered products/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 6626ms (Views: 6600.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/8" for 127.0.0.1 at 2018-06-06 21:26:22 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = ?[0m  [["product_id", 8]]
+  Rendered reviews/_form.html.erb (10.1ms)
+  Rendered products/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 1347ms (Views: 84.8ms | ActiveRecord: 1.1ms)
+
+
